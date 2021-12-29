@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+    background-color: azure;
+}
+
+nav {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.page {
+    flex: auto;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.sign {
+    flex: none;
+    margin: 10px;
+}
+
+.items {
+    flex: none;
+    margin: 10px;
+}
+
+.head {
+    display: flex;
+    flex: auto;
+    height: 300px;
+    font-size: 40px;
+    background-color: #c1dfce;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 270px;
+    background-color: #c1dfce;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+.img_description {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        width: 90%;
+    }
+    .box {
+        width: 45%;
+    }
+}
+
+@media (min-width:601px) {
+    nav>.label {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    nav>.items {
+        display: none
+    }
+    .head {
+        font-size: 30px;
+    }
+    .content {
+        width: 90%;
+    }
+    .box {
+        width: 90%;
+    }
+}
