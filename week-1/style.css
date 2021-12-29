@@ -77,7 +77,7 @@ img {
 }
 
 @media (min-width:601px) {
-    nav>.label {
+    nav>.sign {
         display: none;
     }
 }
