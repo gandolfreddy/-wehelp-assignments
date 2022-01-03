@@ -47,7 +47,7 @@ function maxProduct(nums) {
     for (let i = 0; i < 2; i++) {
         product *= nums.splice(nums.indexOf(Math.max(...nums)), 1)
     }
-    return product
+    return (product === -0 ? 0 : product);
 }
 
 
