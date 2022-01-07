@@ -70,10 +70,31 @@ function q_sort(data, left, right) {
 
 
 function maxProduct(nums) {
-    let len = nums.length;
-    q_sort(nums, 0, len);
+    /*
+    Time Complexity:
+        O(maxProduct(nums)): 
+            O(1) + O(1) + O(nlogn) + O(1) + O(n) => O(nlogn) in best-case and average-case.
+            O(1) + O(1) +  O(n^2)  + O(1) + O(n) => O(n^2) in worst-case.
+    
+    reference:
+        1. https://tc39.es/ecma262/#sec-properties-of-array-instances-length
+        2. https://tc39.es/ecma262/#sec-math.max
+    */
+    // one statement: O(1) in average-case.
+    let left = 0;
+    // array.prototype.length: O(1) in average-case.
+    let right = len = nums.length;
+
+    // quick sort algorithm:
+    //    O(nlogn) in best-case and average-case.
+    //    O(n^2) in worst-case.
+    q_sort(nums, left, right);
+
+    // two statements: O(1) in average-case.
     let product_1 = nums[len - 1] * nums[len - 2];
     let product_2 = (nums[0] * nums[1] === -0) ? 0 : nums[0] * nums[1];
+
+    // Math.max(): O(n) in average-case.
     return Math.max(product_1, product_2);
 }
 
@@ -87,10 +108,28 @@ console.log(maxProduct([-1, -2, 0]));
 
 /* homework 4 */
 function twoSum(nums, target) {
+    /*
+    Time Complexity:
+        O(twoSum(nums, target)): 
+            O(n) + O(n)*(O(1))+O(n)) + O(1)+O(n)*O(n) => O(n^2) in average-case.
+
+    reference: 
+        1. https://tc39.es/ecma262/#sec-array.prototype.entries
+        2. https://tc39.es/ecma262/#sec-array.prototype.includes
+        3. https://tc39.es/ecma262/#sec-array.prototype.indexof
+    */
+
+    // array.prototype.entries(): O(n) in average-case
     let iterator = nums.entries();
+
+    // for loop iteration: O(n) in this case
     for (let item of iterator) {
+        // one statement: O(1) in average-case
         let match_num = target - item[1]
+
+        // array.prototype.includes(): O(n) in average-case 
         if (nums.includes(match_num))
+        // array.prototype.indexof(): O(n) in average-case 
             return [item[0], nums.indexOf(match_num)]
     }
 }
@@ -102,8 +141,27 @@ console.log(result);
 
 /* homework 5 */
 function maxZeros(nums) {
+    /*
+    Time Complexity:
+        O(maxZeros(nums)): 
+            O(n) + O(n) + O(n)*O(1) + O(n) => O(n) in average-case.
+
+    reference: 
+        1. https://tc39.es/ecma262/#sec-array.prototype.join
+        2. https://tc39.es/ecma262/#sec-string.prototype.split
+        3. https://tc39.es/ecma262/#sec-array.prototype.map
+        4. https://tc39.es/ecma262/#sec-math.max
+    */
+
+    // Array.prototype.join(): O(n) in average-case.
+    // String.prototype.split(): O(n) in average-case.
     let nums_arr = nums.join('').split('1');
+
+    // Array.prototype.map(): O(n) in average-case.
+    // Array.prototype.length: O(1) in average-case.
     let nums_len = nums_arr.map(elem => elem.length);
+
+    // Math.max(): O(n) in average-case.
     return Math.max(...nums_len);
 }
 

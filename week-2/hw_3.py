@@ -18,9 +18,29 @@ def q_sort(data, left, right):
 
 
 def maxProduct(nums):
-    q_sort(nums, 0, len(nums))
+    '''
+    Time Complexity:
+        O(maxProduct(nums)): 
+            O(1) + O(1) + O(nlogn) + O(1) + O(n) => O(nlogn) in best-case and average-case.
+            O(1) + O(1) +  O(n^2)  + O(1) + O(n) => O(n^2) in worst-case.
+
+    reference: https://wiki.python.org/moin/TimeComplexity
+    '''
+    # one statement: O(1) in average-case.
+    left = 0
+    # len(): O(1) in average-case.
+    right = len(nums)
+
+    # quick sort algorithm:
+    #    O(nlogn) in best-case and average-case.
+    #    O(n^2) in worst-case.
+    q_sort(nums, left, right) 
+
+    # two statements: O(1) in average-case.
     product_1 = nums[-1] * nums[-2]
     product_2 = nums[0] * nums[1]
+
+    # max(): O(n) in average-case.
     return max(product_1, product_2)
 
 
