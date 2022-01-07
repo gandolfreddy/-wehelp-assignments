@@ -131,7 +131,7 @@ def maxZeros(nums):
     # int to str casting: Normally it should be O(n^2), 
     #                     which is O(n) for division and remainder operations to find n digits, 
     #                     and O(n) for each arithmetic operation.
-    #                     However the digits we have here would be whether 1 or 0, 
+    #                     However the digits we have here would be ether 1 or 0, 
     #                     The time complexity might be treated as O(1).
     # split(): O(n) in average-case.
     nums_lt = ''.join(map(str, nums)).split('1')
