@@ -7,7 +7,6 @@ function showPage() {
         </div>
     */
     for (let i = showCnt * showSize; i < (showCnt + 1) * showSize; i++) {
-        console.log(dataLen, i);
         if (i < dataLen) {
             //// stitle
             let stitle = data[i].stitle;
