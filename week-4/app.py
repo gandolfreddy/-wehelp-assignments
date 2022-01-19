@@ -40,10 +40,11 @@ def sign_in():
 
 @app.route("/member/")
 def member():
-    user_status = session["user_status"]
-    if user_status == "未登入":
-        return redirect('/')
-    return render_template("member.html")
+    user_status = session.get("user_status", "未登入")
+    if user_status == "已登入":
+        return render_template("member.html")
+    return redirect('/')
+    
 
 
 @app.route("/error/")
