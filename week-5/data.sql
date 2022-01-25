@@ -39,7 +39,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'test2','test','test',396,'2022-01-25 23:28:28'),(2,'Abby','abby0307','0307abby',23,'2022-01-25 23:28:28'),(3,'Amee','amee1216','1216amee',45,'2022-01-25 23:28:28'),(4,'Shi Chiang','shiri','qwert',214,'2022-01-25 23:28:28'),(5,'gandolfreddy','thering','ofthelord',34,'2022-01-25 23:28:28'),(6,'Sirius','sirius','black',102,'2022-01-25 23:28:29');
+INSERT INTO `member` VALUES (1,'test2','test','test',396,'2022-01-25 23:55:12'),(2,'Abby','abby0307','0307abby',23,'2022-01-25 23:55:21'),(3,'Amee','amee1216','1216amee',45,'2022-01-25 23:55:29'),(4,'Shi Chiang','shiri','qwert',214,'2022-01-25 23:55:34'),(5,'gandolfreddy','thering','ofthelord',34,'2022-01-25 23:55:41'),(6,'Sirius','sirius','black',102,'2022-01-25 23:55:47');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,7 +58,7 @@ CREATE TABLE `message` (
   PRIMARY KEY (`id`),
   KEY `member_id` (`member_id`),
   CONSTRAINT `message_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `message` (
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (1,3,'Heyyyyyyy~','2022-01-25 23:39:46'),(2,1,'this is a pen.','2022-01-25 23:39:46'),(3,4,'Hello MySQL','2022-01-25 23:39:46'),(4,6,'Guess who\'s back, back again.','2022-01-25 23:39:47');
+INSERT INTO `message` VALUES (1,3,'Heyyyyyyy~','2022-01-26 00:06:21'),(2,1,'this is a pen.','2022-01-26 00:06:28'),(3,4,'Hello MySQL','2022-01-26 00:06:34'),(4,6,'Guess who\'s back, back again.','2022-01-26 00:06:41'),(5,1,'And this is a book.','2022-01-26 00:06:49');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-25 23:44:43
+-- Dump completed on 2022-01-26  0:09:53
