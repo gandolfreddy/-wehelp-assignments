@@ -122,6 +122,8 @@
                 values (4, "Hello MySQL");
     insert into message (member_id, content) 
                 values (6, "Guess who's back, back again.");
+    insert into message (member_id, content) 
+                values (1, "And this is a book.");
     ```
     ![image](https://user-images.githubusercontent.com/22278312/151013861-ce0cd784-1fec-4e03-80c9-b304c6534b94.png)
 * 使用 SELECT 搭配 JOIN 語法，取得所有留言，結果須包含留言者會員的姓名。
