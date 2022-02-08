@@ -87,6 +87,7 @@ def sign_up():
 @bp.route("/signout", methods=["GET"])
 def sign_out():
     session["user_status"] = "未登入"
+    session["user"] = "使用者"
     return redirect('/')
 
 
