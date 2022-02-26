@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS 測試</title>
+    <style>
+        body {
+            display: grid;
+            grid-template: repeat(4, 25%)/10% 25% 65%;
+            height: 600px;
+        }
+        button {
+            margin: 10px 0px 10px;
+        }
+        #fetch-google {
+            grid-column: 2;
+            grid-row: 2;
+            font-size: 15px;
+        }
+        #fetch-google-result {
+            grid-column: 3;
+            grid-row: 2;
+            font-size: 20px;
+            margin: auto;
+            text-align: center;
+        }
+        #fetch-padax-github {
+            grid-column: 2;
+            grid-row: 3;
+            font-size: 15px;
+        }
+        #fetch-padax-github-result {
+            grid-column: 3;
+            grid-row: 3;
+            font-size: 20px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fetchGoogle();" id="fetch-google">使用 fetch() 連結至 Google 網址，並取得回應</button>
+    <div id="fetch-google-result"></div>
+    <button onclick="fetchPadaxGithub();" id="fetch-padax-github">使用 fetch() 連結至 padax.github.io 網址，並取得回應</button>
+    <div id="fetch-padax-github-result"></div>
+    <script>
+        function fetchGoogle() {
+            const selector = "#fetch-google-result";
+            const url = "https://www.google.com/";
+            fetchSth(url, selector);
+        }
+
+        function fetchPadaxGithub() {
+            const selector = "#fetch-padax-github-result";
+            const url = "https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json";
+            fetchSth(url, selector);
+        }
+
+        function fetchSth(url, selector) {
+            const result = document.querySelector(selector);
+            fetch(url).then((response) => {
+                result.textContent = `Get sth from ${url}`;
+            }).catch(() => {
+                result.textContent = "Get nothing";
+            });
+        }
+    </script>
+</body>
+</html>
