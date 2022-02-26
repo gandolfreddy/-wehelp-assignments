@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    background-color: azure;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    height: 60px;
+    padding: 20px;
+    text-align: center;
+    color: azure;
+    background-color: #063a1d;
+}
+
+.container {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.member-msg {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(55, 92, 94);
+}
+
+a {
+    font-size: 28px;
+}
+
+.query-box {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#query-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input, #search-button{
+    font-size: 15px;
+    height: 40px;
+    margin: 5px;
+}
+
+#search-input {
+    width: 200px;
+    padding: 15px 10px 15px;
+}
+
+#query-username {
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 5px 10px;
+}
+
+.setname-box {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#setname-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.setname-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#setname-input, #setname-button{
+    font-size: 15px;
+    height: 40px;
+    margin: 5px;
+}
+
+#setname-input {
+    width: 200px;
+    padding: 15px 10px 15px;
+}
+
+#setname-result {
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 5px 10px;
+}
