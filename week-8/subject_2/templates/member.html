@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>會員頁面</title>
+    <link rel="stylesheet" type="text/css" href="/style/member.css" />
+</head>
+
+<body>
+    <div class="title">歡迎光臨，這是會員頁面</div>
+    <div class="container">
+        <div class="member-msg">{{ name }}，歡迎登入系統</div>
+        <a href="/signout">登出系統</a>
+    </div>
+
+    <div class="query-box">
+        <div id="query-title">查詢會員姓名</div>
+        <div class="search-row">
+            <input type="text" id="search-input" placeholder="輸入欲查詢帳號">
+            <button id="search-button" onclick="showName();">查詢</button>
+        </div>
+        <div id="query-username"></div>
+    </div>
+
+    <div class="setname-box">
+        <div id="setname-title">更新我的姓名</div>
+        <div class="setname-row">
+            <input type="text" id="setname-input" placeholder="輸入新的姓名">
+            <button id="setname-button" onclick="setName();">更新</button>
+        </div>
+        <div id="setname-result"></div>
+    </div>
+
+    <script src="/js/member.js"></script>
+</body>
+
+</html>

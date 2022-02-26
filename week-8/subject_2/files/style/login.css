@@ -1,0 +1,57 @@
+body {
+    margin: 0px;
+    background-color: azure;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    height: 60px;
+    padding: 20px;
+    text-align: center;
+    color: azure;
+    background-color: #1a2e5a;
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-head, .signup-head {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+input {
+    font-size: 15px;
+    width: 200px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+button {
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px 10px 5px 10px;
+}
